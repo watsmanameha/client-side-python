@@ -18,26 +18,21 @@ ASCII(например, €);
 Реализовать считывание данных из созданного файла и проверить,
 совпадают ли они с исходными.
 """
+import yaml
+
+data = {'items': ['printer', 'computer'],
+        'num': 2,
+        'price': {
+            'printer': '3€-4€',
+            'computer': '6€-8€'
+        }}
+
+with open('file_new.yaml', 'w') as f_n:
+    yaml.dump(data, f_n, default_flow_style=False, allow_unicode=True)
+
+with open('file_new.yaml') as f_n:
+    print(f_n.read())
 
 
 
 
-
-
-
-
-
-
-
-
-
-import socket
-
-obj_sock = socket.socket()
-
-# bytes ->
-obj_sock.sendto(var, ())
-
-#close
-
-клиент 1) 2)
